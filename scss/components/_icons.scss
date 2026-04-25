@@ -1,0 +1,26 @@
+.social {
+  display: flex;
+  gap: 20px;
+  &__link {
+    width: 44px;
+    height: 44px;
+    border: 1.5px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    background-color: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__link:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &__icon {
+    width: 18px;
+    height: 18px;
+    fill: #ffffff;
+    object-fit: contain;
+    transition: fill 0.3s;
+  }
+}

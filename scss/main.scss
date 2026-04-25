@@ -1,7 +1,8 @@
-@import 'reset';
-@import 'variables';
-@import 'mixins';
+@use "mixins" as *;
+@import "reset";
+@import "variables";
 
 // components
-@import './components/header';
-@import './components/hero';
+@import "./components/header";
+@import "./components/icons";
+@import "./components/main";

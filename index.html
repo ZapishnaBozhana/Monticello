@@ -4,25 +4,58 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
-    <header>
-      <!-- <div> logo </div>-->
-      <nav>
-        <menu>
-          <ul>
-            <li><a href="#">about us</a></li>
-            <li><a href="#">projects</a></li>
-            <li><a href="#">news</a></li>
-            <li><a href="#">contact</a></li>
+    <header class="header">
+      <div class="container header__container">
+        <div>
+          <a href="#" class="header__logo">
+            <img src="./images/logo.svg" alt="Monticello" />
+          </a>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__menu">
+            <li><a href="#" class="header__link">about us</a></li>
+            <li><a href="#" class="header__link">projects</a></li>
+            <li><a href="#" class="header__link">news</a></li>
+            <li><a href="#" class="header__link">contact</a></li>
           </ul>
-        </menu>
-        <!--icons-->
-      </nav>
+        </nav>
+        <div class="social">
+          <a href="#" class="social__link">
+            <svg class="social__icon">
+              <use href="./images/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+          <a href="#" class="social__link">
+            <svg class="social__icon">
+              <use href="./images/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+          <a href="#" class="social__link">
+            <svg class="social__icon">
+              <use href="./images/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
     </header>
     <main>
-      <section>
-        <h1></h1>
+      <section class="hero-section">
+        <div class="container">
+          <h1 class="hero-section__title">simple &amp modern</h1>
+          <p class="hero-section__subtitle">
+            we make the world beautiful everyday
+          </p>
+        </div>
+        <ul class="hero__pagination">
+          <li class="pagination__item"></li>
+          <li class="pagination__item"></li>
+          <li class="pagination__item"></li>
+          <li class="pagination__item"></li>
+          <li class="pagination__item"></li>
+        </ul>
       </section>
       <section></section>
       <section></section>
