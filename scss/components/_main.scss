@@ -201,9 +201,21 @@
 }
 /*News section*/
 .news {
+  background-image:
+    linear-gradient(
+      237.1deg,
+      rgba(36, 204, 250, 0.7) 11.16%,
+      rgba(60, 127, 212, 0.7) 89.18%
+    ),
+    url("../images/news-bg.png"),
+    linear-gradient(237.1deg, #24ccfa 11.16%, #3c7fd4 89.18%);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.news {
   padding: 120px 0;
-  // Градієнт на фон всієї секції
-  background-image: linear-gradient(237.1deg, #24ccfa 11.16%, #3c7fd4 89.18%);
+
   &__title {
     color: #fff;
     text-align: center;
@@ -236,6 +248,7 @@
     height: 100%;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease;
 
     &:hover {
