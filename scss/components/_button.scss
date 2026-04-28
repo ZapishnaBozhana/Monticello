@@ -1,0 +1,15 @@
+.main-btn {
+  padding: 16px 40px;
+  background-color: transparent;
+  border: 1px solid #2c4058;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #2d314d;
+    color: #fff;
+  }
+}
