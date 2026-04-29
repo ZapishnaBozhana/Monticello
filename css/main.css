@@ -408,9 +408,11 @@ address {
 
 /*Form section*/
 .map-area {
-  height: 500px;
+  position: relative;
+  height: 700px;
   width: 100%;
   background-color: #eee;
+  z-index: 1;
 }
 .map-area #map {
   height: 100%;
@@ -418,15 +420,18 @@ address {
 }
 
 .contact {
-  padding-bottom: 100px;
+  position: relative;
 }
 .contact__card {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 30%);
+  bottom: 0;
   background: #ffffff;
   width: 100%;
   max-width: 770px;
-  margin: -150px auto 0;
-  position: relative;
-  z-index: 10;
+  height: 450px;
+  z-index: 100;
   padding: 60px;
   display: flex;
   flex-direction: column;
@@ -487,6 +492,19 @@ address {
 }
 .contact-form input:focus {
   border-bottom-color: #7e5aff;
+}
+
+/*Footer*/
+.footer {
+  padding: 203px 0 150px;
+  background: linear-gradient(251.06deg, #7e5aff -2.19%, #55b7ff 103.21%);
+}
+.footer__container {
+  max-width: 770px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .main-btn {
