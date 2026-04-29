@@ -151,7 +151,7 @@ address {
 
 .hero__pagination {
   position: fixed;
-  right: 30px;
+  right: 20px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 20;
@@ -300,17 +300,21 @@ address {
   list-style: none;
   padding: 0;
   text-align: left;
+  margin: 0 -15px;
 }
 .news__item {
-  flex: 1;
-  max-width: 370px;
+  padding: 0 15px;
+  height: auto;
+  display: flex !important;
+  outline: none;
 }
 .news__card {
   background-color: #fff;
   height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
 }
 .news__card:hover {
@@ -363,6 +367,44 @@ address {
 .news__date {
   font-size: 14px;
   color: #55b7ff;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  display: none !important;
+}
+.slick-prev,
+.slick-next {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 10px solid #ffffff;
+  border-radius: 50%;
+  background: transparent;
+}
+.slick-prev.slick-prev,
+.slick-next.slick-prev {
+  left: -60px;
+}
+.slick-prev.slick-next,
+.slick-next.slick-next {
+  right: -60px;
+}
+.slick-prev svg,
+.slick-next svg {
+  fill: #fff;
+}
+
+.slick-arrow {
+  display: flex !important;
+  width: 40px !important;
+  height: 40px !important;
+  min-width: 40px;
+  border: 1px solid #ffffff !important;
+  border-radius: 50% !important;
+  cursor: pointer;
 }
 
 /*Gallery secion*/
@@ -431,7 +473,7 @@ address {
   width: 100%;
   max-width: 770px;
   height: 450px;
-  z-index: 100;
+  z-index: 10;
   padding: 60px;
   display: flex;
   flex-direction: column;

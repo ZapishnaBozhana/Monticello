@@ -1,12 +1,24 @@
-// Чекаємо, поки завантажиться вся сторінка
+//Slider
+$(document).ready(function () {
+  $(".news__list").slick({
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: false,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    dots: true,
+    arrows: true,
+    prevArrow:
+      '<button type="button" class="slick-arrow slick-prev"><svg width="6" height="16"><use href="./images/sprite.svg#icon-arrow"></use></svg></button>',
+    nextArrow:
+      '<button type="button" class="slick-arrow slick-next"><svg width="6" height="16"><use href="./images/sprite.svg#icon-arrow-right"></use></svg></button>',
+  });
+});
+//Map
 document.addEventListener("DOMContentLoaded", function () {
-  // 1. Ініціалізація карти.
-  // [40.678, -73.944] — це координати Брукліна з макету.
-  // 13 — це масштаб (чим більше число, тим ближче карта).
   var map = L.map("map").setView([40.678, -73.944], 16);
 
-  // 2. Підключаємо шар карти (дизайн).
-  // Ми беремо стиль 'light_all', щоб карта була світлою та стильною, як на дизайні.
   L.tileLayer(
     "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
     {
@@ -14,16 +26,13 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   ).addTo(map);
 
-  // 3. Створюємо кастомну іконку для маркера (опціонально)
-  // Якщо хочеш просто стандартний синій маркер — пропусти цей пункт і читай далі.
   var myIcon = L.icon({
-    iconUrl: "./images/marker.png", // шлях до картинки маркера в твоєму проекті
-    iconSize: [40, 40], // розмір іконки
+    iconUrl: "./images/marker.png",
+    iconSize: [40, 40],
   });
 
-  // 4. Ставимо маркер на карту
   L.marker([40.681, -73.939])
     .addTo(map)
-    .bindPopup("Monticello Office") // Текст, який з'явиться при кліку
+    .bindPopup("Monticello Office")
     .openPopup();
 });
