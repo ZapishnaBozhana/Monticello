@@ -22,6 +22,7 @@ $(document).ready(function () {
     );
   });
 });
+
 //Slider
 $(document).ready(function () {
   $(".news__list").slick({
@@ -29,6 +30,7 @@ $(document).ready(function () {
     slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: false,
+    adaptiveHeight: false,
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
@@ -40,8 +42,9 @@ $(document).ready(function () {
       '<button type="button" class="slick-arrow slick-next"><svg width="6" height="16"><use href="./images/sprite.svg#icon-arrow-right"></use></svg></button>',
   });
 });
+
 //Map
-document.addEventListener("DOMContentLoaded", function () {
+$(document).ready(function () {
   var map = L.map("map").setView([40.678, -73.944], 16);
 
   L.tileLayer(
@@ -60,4 +63,35 @@ document.addEventListener("DOMContentLoaded", function () {
     .addTo(map)
     .bindPopup("Monticello Office")
     .openPopup();
+});
+
+//form
+$(document).ready(function () {
+  $("#contact-form").on("submit", function (e) {
+    e.preventDefault();
+
+    const $nameInput = $("#user-name");
+    const $emailInput = $("#user-email");
+
+    $(".contact__input").removeClass("error");
+
+    let isValid = true;
+
+    if ($nameInput.val().trim().length < 2) {
+      $nameInput.addClass("error");
+      isValid = false;
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test($emailInput.val().trim())) {
+      $emailInput.addClass("error");
+      isValid = false;
+    }
+
+    if (isValid) {
+      console.log("Форма валідна! Відправляємо...");
+      $(this).find(".submit-btn").text("SENT!").css("background", "#2c2c2c");
+      this.reset();
+    }
+  });
 });

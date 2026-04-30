@@ -64,7 +64,7 @@
     <main>
       <section class="hero-section">
         <div class="container">
-          <h1 class="hero-section__title">simple &amp; modern</h1>
+          <h1 class="hero-section__title title">simple &amp; modern</h1>
           <p class="hero-section__subtitle">
             we make the world beautiful everyday
           </p>
@@ -84,7 +84,7 @@
       </section>
       <section id="projects-section" class="projects section">
         <div class="container">
-          <h2 class="projects__title section-title">what we do</h2>
+          <h2 class="projects__title title">what we do</h2>
           <div class="project">
             <div class="project__img">
               <div class="project__bg project__bg--blue"></div>
@@ -92,7 +92,7 @@
             </div>
             <div class="project__content">
               <span class="project__subtitle">one world</span>
-              <h3 class="project__title">trade center</h3>
+              <h3 class="project__title title">trade center</h3>
               <p class="project__text">
                 Increasing prosperity in our lives can be accomplished by having
                 the right frame of mind. The truth is, our thoughts are very
@@ -109,7 +109,7 @@
             </div>
             <div class="project__content">
               <span class="project__subtitle">internetional</span>
-              <h3 class="project__title">commerce centre</h3>
+              <h3 class="project__title title">commerce centre</h3>
               <p class="project__text">
                 Successful businesses have many things in common, today we’ll
                 look at the big ‘R’ of recognition and how a digital advertising
@@ -123,7 +123,7 @@
       </section>
       <section id="news-section" class="news section">
         <div class="container">
-          <h2 class="news__title section-title">latest news</h2>
+          <h2 class="news__title title">latest news</h2>
           <ul class="news__list">
             <li class="news__item">
               <article class="news__card">
@@ -292,9 +292,12 @@
       </section>
       <section id="gallery-section" class="gallery section">
         <div class="container">
-          <h2 class="gallery__title section-title">gallery</h2>
+          <h2 class="gallery__title title">gallery</h2>
           <div class="gallery__grid">
             <div class="gallery__item large">
+              <div class="gallery__icon">
+                <svg><use href="./images/sprite.svg#icon-zoom-in"></use></svg>
+              </div>
               <img src="./images/gallery-photo1.jpg" alt="Architecture photo" />
             </div>
             <div class="gallery__item">
@@ -318,7 +321,7 @@
       </section>
       <section id="contact-section" class="contact section">
         <div class="contact__card">
-          <h2 class="contact__title section-title">get in touch</h2>
+          <h2 class="contact__title title">get in touch</h2>
           <div class="contact__content">
             <div class="contact__info">
               <p>📍 91 Nolan Extensions Suite 670</p>
@@ -327,8 +330,19 @@
               <p>🕓 From 07:05AM to 19:30PM</p>
             </div>
             <form class="contact-form">
-              <input type="text" placeholder="Mollie Medina" />
-              <input type="email" placeholder="Email" />
+              <input
+                type="text"
+                id="user-name"
+                placeholder="Mollie Medina"
+                minlength="2"
+                required
+              />
+              <input
+                type="email"
+                id="user-email"
+                placeholder="Email"
+                required
+              />
               <button class="contact-form__btn" type="submit">SUBMIT</button>
             </form>
           </div>
