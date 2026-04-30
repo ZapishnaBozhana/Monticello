@@ -1,3 +1,27 @@
+$(document).ready(function () {
+  $(".hero__scroll-btn, .header__link").on("click", function (event) {
+    event.preventDefault();
+
+    var target = $(this).attr("href");
+    var $section = $(target);
+    var scrollPoint;
+
+    if ($(this).hasClass("hero__scroll-btn")) {
+      scrollPoint = $section.offset().top;
+    } else {
+      scrollPoint =
+        $section.offset().top +
+        $section.outerHeight() / 2 -
+        $(window).height() / 2;
+    }
+    $("html, body").animate(
+      {
+        scrollTop: scrollPoint,
+      },
+      1000,
+    );
+  });
+});
 //Slider
 $(document).ready(function () {
   $(".news__list").slick({
@@ -8,6 +32,7 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 4000,
     dots: true,
+    dotsClass: "my-custom-dots",
     arrows: true,
     prevArrow:
       '<button type="button" class="slick-arrow slick-prev"><svg width="6" height="16"><use href="./images/sprite.svg#icon-arrow"></use></svg></button>',

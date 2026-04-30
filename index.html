@@ -34,10 +34,12 @@
         </div>
         <nav class="header__nav">
           <ul class="header__menu">
-            <li><a href="#" class="header__link">about us</a></li>
-            <li><a href="#" class="header__link">projects</a></li>
-            <li><a href="#" class="header__link">news</a></li>
-            <li><a href="#" class="header__link">contact</a></li>
+            <li>
+              <a href="#projects-section" class="header__link">projects</a>
+            </li>
+            <li><a href="#news-section" class="header__link">news</a></li>
+            <li><a href="#gallery-section" class="header__link">gallery</a></li>
+            <li><a href="#contact-section" class="header__link">contact</a></li>
           </ul>
         </nav>
         <div class="social">
@@ -62,7 +64,7 @@
     <main>
       <section class="hero-section">
         <div class="container">
-          <h1 class="hero-section__title">simple &amp modern</h1>
+          <h1 class="hero-section__title">simple &amp; modern</h1>
           <p class="hero-section__subtitle">
             we make the world beautiful everyday
           </p>
@@ -74,8 +76,13 @@
           <li class="pagination__item"></li>
           <li class="pagination__item"></li>
         </ul>
+        <a href="#projects-section" class="hero__scroll-btn">
+          <svg class="scroll-arrow">
+            <use href="./images/sprite.svg#icon-arrow-bottom"></use>
+          </svg>
+        </a>
       </section>
-      <section class="projects section">
+      <section id="projects-section" class="projects section">
         <div class="container">
           <h2 class="projects__title section-title">what we do</h2>
           <div class="project">
@@ -114,7 +121,7 @@
           </div>
         </div>
       </section>
-      <section class="news section">
+      <section id="news-section" class="news section">
         <div class="container">
           <h2 class="news__title section-title">latest news</h2>
           <ul class="news__list">
@@ -283,7 +290,7 @@
           </ul>
         </div>
       </section>
-      <section class="gallery section">
+      <section id="gallery-section" class="gallery section">
         <div class="container">
           <h2 class="gallery__title section-title">gallery</h2>
           <div class="gallery__grid">
@@ -309,7 +316,7 @@
       <section class="map-area">
         <div id="map"></div>
       </section>
-      <section class="contact section">
+      <section id="contact-section" class="contact section">
         <div class="contact__card">
           <h2 class="contact__title section-title">get in touch</h2>
           <div class="contact__content">

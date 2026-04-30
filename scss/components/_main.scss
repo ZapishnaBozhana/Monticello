@@ -72,6 +72,37 @@
     background-color: rgba(255, 255, 255, 1);
   }
 }
+.hero__scroll-btn {
+  position: absolute;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: transparent;
+
+  transition: all 0.3s ease;
+  z-index: 10;
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.8);
+    transform: translateX(-50%) translateY(5px);
+  }
+
+  .scroll-arrow {
+    width: 10px;
+    height: 17px;
+    fill: white;
+  }
+}
 
 /*Projects-section*/
 
@@ -335,12 +366,48 @@
   border-radius: 50% !important;
   cursor: pointer;
 }
+.my-custom-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  margin: 50px 0 0 0;
+  width: 100%;
+  gap: 40px;
+
+  li {
+    button {
+      display: block;
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      cursor: pointer;
+      background: transparent;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
+
+      transition: all 0.3s ease;
+
+      &::before {
+        display: none !important;
+      }
+    }
+
+    &.slick-active button {
+      background: #ffffff;
+      transform: scale(1.2);
+    }
+  }
+}
 
 /*Gallery secion*/
 .gallery {
   padding: 150px 0;
   &__title {
-    margin-bottom: 90px;
+    margin-bottom: 70px;
     position: relative;
 
     &::before {
@@ -396,6 +463,9 @@
     transform: translate(-50%, 30%);
     bottom: 0;
     background: #ffffff;
+    background-image: url(../images/form-bg.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
     width: 100%;
     max-width: 770px;
     height: 450px; ///!!!
@@ -468,7 +538,9 @@
 /*Footer*/
 .footer {
   padding: 203px 0 150px;
-  background: linear-gradient(251.06deg, #7e5aff -2.19%, #55b7ff 103.21%);
+  background-image:
+    url(../images/footer-bg.png),
+    linear-gradient(251.06deg, #7e5aff -2.19%, #55b7ff 103.21%);
   &__container {
     max-width: 770px;
     margin: 0 auto;
